@@ -14,7 +14,7 @@ http://localhost:6543?review=@AIRLINE $ % StAff I hate the services http://www.g
 """
 @response_adapter(dict, list)
 def airline_sentiment_prediction(request):
-    model_name = "airline_sentiment_model_20201123025610.sav"
+    model_name = "airline_sentiment_model.sav"
     review = request.GET.get('review')
     res = TestAirlineSentiment(model_name, review).test()
     response = {
